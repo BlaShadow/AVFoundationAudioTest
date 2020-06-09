@@ -3,27 +3,39 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C050CB0BDFC27A0B3556D3F /* Pods_AudioFoundationTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32FAF73E278E1719610C2021 /* Pods_AudioFoundationTest.framework */; };
 		BF5598C7248E8F83005DB9D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5598C6248E8F83005DB9D6 /* AppDelegate.swift */; };
-		BF5598C9248E8F83005DB9D6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5598C8248E8F83005DB9D6 /* SceneDelegate.swift */; };
 		BF5598CB248E8F83005DB9D6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5598CA248E8F83005DB9D6 /* ViewController.swift */; };
-		BF5598CE248E8F83005DB9D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF5598CC248E8F83005DB9D6 /* Main.storyboard */; };
 		BF5598D0248E8F85005DB9D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF5598CF248E8F85005DB9D6 /* Assets.xcassets */; };
 		BF5598D3248E8F85005DB9D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF5598D1248E8F85005DB9D6 /* LaunchScreen.storyboard */; };
+		BF5598DB248EA26A005DB9D6 /* AudioPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5598DA248EA26A005DB9D6 /* AudioPlayerView.swift */; };
+		BF5598DD248EE80A005DB9D6 /* RecordingsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5598DC248EE80A005DB9D6 /* RecordingsCollectionView.swift */; };
+		BF5598DF248EEE67005DB9D6 /* RecordingsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5598DE248EEE67005DB9D6 /* RecordingsDataSource.swift */; };
+		BF5598E2248EEEDA005DB9D6 /* RecordingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5598E1248EEEDA005DB9D6 /* RecordingCollectionViewCell.swift */; };
+		BF5598E4248EF2C4005DB9D6 /* RecordingsCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5598E3248EF2C4005DB9D6 /* RecordingsCollectionLayout.swift */; };
+		BF5598E6248EF9DC005DB9D6 /* Recording.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5598E5248EF9DC005DB9D6 /* Recording.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BF5598C3248E8F83005DB9D6 /* AudioFoundationTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioFoundationTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		32FAF73E278E1719610C2021 /* Pods_AudioFoundationTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AudioFoundationTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		33C8B9D05F56559D9B985F7A /* Pods-AudioFoundationTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AudioFoundationTest.release.xcconfig"; path = "Target Support Files/Pods-AudioFoundationTest/Pods-AudioFoundationTest.release.xcconfig"; sourceTree = "<group>"; };
+		6DE70B600E3C400CFB6AD785 /* Pods-AudioFoundationTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AudioFoundationTest.debug.xcconfig"; path = "Target Support Files/Pods-AudioFoundationTest/Pods-AudioFoundationTest.debug.xcconfig"; sourceTree = "<group>"; };
+		BF5598C3248E8F83005DB9D6 /* Recording.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recording.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF5598C6248E8F83005DB9D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BF5598C8248E8F83005DB9D6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		BF5598CA248E8F83005DB9D6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		BF5598CD248E8F83005DB9D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BF5598CF248E8F85005DB9D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF5598D2248E8F85005DB9D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF5598D4248E8F85005DB9D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF5598DA248EA26A005DB9D6 /* AudioPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerView.swift; sourceTree = "<group>"; };
+		BF5598DC248EE80A005DB9D6 /* RecordingsCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingsCollectionView.swift; sourceTree = "<group>"; };
+		BF5598DE248EEE67005DB9D6 /* RecordingsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingsDataSource.swift; sourceTree = "<group>"; };
+		BF5598E1248EEEDA005DB9D6 /* RecordingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingCollectionViewCell.swift; sourceTree = "<group>"; };
+		BF5598E3248EF2C4005DB9D6 /* RecordingsCollectionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingsCollectionLayout.swift; sourceTree = "<group>"; };
+		BF5598E5248EF9DC005DB9D6 /* Recording.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recording.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,24 +43,44 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C050CB0BDFC27A0B3556D3F /* Pods_AudioFoundationTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		17613D45A3ED951E9D6317FD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6DE70B600E3C400CFB6AD785 /* Pods-AudioFoundationTest.debug.xcconfig */,
+				33C8B9D05F56559D9B985F7A /* Pods-AudioFoundationTest.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		1ADFEDB1B5ACF983E39C9738 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				32FAF73E278E1719610C2021 /* Pods_AudioFoundationTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BF5598BA248E8F83005DB9D6 = {
 			isa = PBXGroup;
 			children = (
 				BF5598C5248E8F83005DB9D6 /* AudioFoundationTest */,
 				BF5598C4248E8F83005DB9D6 /* Products */,
+				17613D45A3ED951E9D6317FD /* Pods */,
+				1ADFEDB1B5ACF983E39C9738 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		BF5598C4248E8F83005DB9D6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BF5598C3248E8F83005DB9D6 /* AudioFoundationTest.app */,
+				BF5598C3248E8F83005DB9D6 /* Recording.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,15 +88,27 @@
 		BF5598C5248E8F83005DB9D6 /* AudioFoundationTest */ = {
 			isa = PBXGroup;
 			children = (
+				BF5598E0248EEEC1005DB9D6 /* New Group */,
 				BF5598C6248E8F83005DB9D6 /* AppDelegate.swift */,
-				BF5598C8248E8F83005DB9D6 /* SceneDelegate.swift */,
 				BF5598CA248E8F83005DB9D6 /* ViewController.swift */,
-				BF5598CC248E8F83005DB9D6 /* Main.storyboard */,
 				BF5598CF248E8F85005DB9D6 /* Assets.xcassets */,
 				BF5598D1248E8F85005DB9D6 /* LaunchScreen.storyboard */,
 				BF5598D4248E8F85005DB9D6 /* Info.plist */,
+				BF5598DA248EA26A005DB9D6 /* AudioPlayerView.swift */,
+				BF5598DC248EE80A005DB9D6 /* RecordingsCollectionView.swift */,
+				BF5598DE248EEE67005DB9D6 /* RecordingsDataSource.swift */,
+				BF5598E1248EEEDA005DB9D6 /* RecordingCollectionViewCell.swift */,
+				BF5598E3248EF2C4005DB9D6 /* RecordingsCollectionLayout.swift */,
+				BF5598E5248EF9DC005DB9D6 /* Recording.swift */,
 			);
 			path = AudioFoundationTest;
+			sourceTree = "<group>";
+		};
+		BF5598E0248EEEC1005DB9D6 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +118,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BF5598D7248E8F85005DB9D6 /* Build configuration list for PBXNativeTarget "AudioFoundationTest" */;
 			buildPhases = (
+				F5D3B290F79DB64328B9C00E /* [CP] Check Pods Manifest.lock */,
 				BF5598BF248E8F83005DB9D6 /* Sources */,
 				BF5598C0248E8F83005DB9D6 /* Frameworks */,
 				BF5598C1248E8F83005DB9D6 /* Resources */,
+				374C1B8D244E85F1975D0E70 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -84,7 +130,7 @@
 			);
 			name = AudioFoundationTest;
 			productName = AudioFoundationTest;
-			productReference = BF5598C3248E8F83005DB9D6 /* AudioFoundationTest.app */;
+			productReference = BF5598C3248E8F83005DB9D6 /* Recording.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -127,34 +173,72 @@
 			files = (
 				BF5598D3248E8F85005DB9D6 /* LaunchScreen.storyboard in Resources */,
 				BF5598D0248E8F85005DB9D6 /* Assets.xcassets in Resources */,
-				BF5598CE248E8F83005DB9D6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		374C1B8D244E85F1975D0E70 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AudioFoundationTest/Pods-AudioFoundationTest-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AudioFoundationTest/Pods-AudioFoundationTest-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AudioFoundationTest/Pods-AudioFoundationTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F5D3B290F79DB64328B9C00E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AudioFoundationTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BF5598BF248E8F83005DB9D6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF5598E2248EEEDA005DB9D6 /* RecordingCollectionViewCell.swift in Sources */,
+				BF5598DF248EEE67005DB9D6 /* RecordingsDataSource.swift in Sources */,
+				BF5598E4248EF2C4005DB9D6 /* RecordingsCollectionLayout.swift in Sources */,
+				BF5598DD248EE80A005DB9D6 /* RecordingsCollectionView.swift in Sources */,
 				BF5598CB248E8F83005DB9D6 /* ViewController.swift in Sources */,
 				BF5598C7248E8F83005DB9D6 /* AppDelegate.swift in Sources */,
-				BF5598C9248E8F83005DB9D6 /* SceneDelegate.swift in Sources */,
+				BF5598DB248EA26A005DB9D6 /* AudioPlayerView.swift in Sources */,
+				BF5598E6248EF9DC005DB9D6 /* Recording.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		BF5598CC248E8F83005DB9D6 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BF5598CD248E8F83005DB9D6 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		BF5598D1248E8F85005DB9D6 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -282,17 +366,19 @@
 		};
 		BF5598D8248E8F85005DB9D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6DE70B600E3C400CFB6AD785 /* Pods-AudioFoundationTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C6QZ6SJB3K;
 				INFOPLIST_FILE = AudioFoundationTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.shadow.AudioFoundationTest;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Recording;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -300,17 +386,19 @@
 		};
 		BF5598D9248E8F85005DB9D6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33C8B9D05F56559D9B985F7A /* Pods-AudioFoundationTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C6QZ6SJB3K;
 				INFOPLIST_FILE = AudioFoundationTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.shadow.AudioFoundationTest;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Recording;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
