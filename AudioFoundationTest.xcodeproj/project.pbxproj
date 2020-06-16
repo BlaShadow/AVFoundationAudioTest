@@ -35,6 +35,7 @@
 		BFBFDAD62496D38600EEA965 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBFDAD52496D38600EEA965 /* PlayerView.swift */; };
 		BFBFDAD82496F99C00EEA965 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBFDAD72496F99C00EEA965 /* AudioPlayer.swift */; };
 		BFBFDADD2498E8CC00EEA965 /* PlayingTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBFDADC2498E8CC00EEA965 /* PlayingTrack.swift */; };
+		BFBFDADF2499780900EEA965 /* TimeIntervalHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBFDADE2499780900EEA965 /* TimeIntervalHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,7 @@
 		BFBFDAD52496D38600EEA965 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 		BFBFDAD72496F99C00EEA965 /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
 		BFBFDADC2498E8CC00EEA965 /* PlayingTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingTrack.swift; sourceTree = "<group>"; };
+		BFBFDADE2499780900EEA965 /* TimeIntervalHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeIntervalHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				BFBFDAD02496B7E100EEA965 /* Views */,
+				BFBFDADE2499780900EEA965 /* TimeIntervalHelper.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -354,6 +357,7 @@
 				BFBFDAD62496D38600EEA965 /* PlayerView.swift in Sources */,
 				BF5598DD248EE80A005DB9D6 /* RecordingsCollectionView.swift in Sources */,
 				BFBFDAB7249676C700EEA965 /* RecordingsViewController.swift in Sources */,
+				BFBFDADF2499780900EEA965 /* TimeIntervalHelper.swift in Sources */,
 				BFBFDAB9249676EA00EEA965 /* RecordViewController.swift in Sources */,
 				BFBFDABD2496AC3900EEA965 /* RecordView.swift in Sources */,
 				BF5598CB248E8F83005DB9D6 /* ViewController.swift in Sources */,
