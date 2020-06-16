@@ -8,5 +8,6 @@ target 'AudioFoundationTest' do
   # Pods for AudioFoundationTest
   pod 'RxSwift', '~> 5'
   pod 'RxCocoa', '~> 5'
-  pod "RxGesture"
+  pod 'RxGesture'
+  pod 'RealmSwift'
 end
