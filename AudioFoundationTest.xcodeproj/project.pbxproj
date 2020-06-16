@@ -18,6 +18,23 @@
 		BF5598E2248EEEDA005DB9D6 /* RecordingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5598E1248EEEDA005DB9D6 /* RecordingCollectionViewCell.swift */; };
 		BF5598E4248EF2C4005DB9D6 /* RecordingsCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5598E3248EF2C4005DB9D6 /* RecordingsCollectionLayout.swift */; };
 		BF5598E6248EF9DC005DB9D6 /* Recording.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5598E5248EF9DC005DB9D6 /* Recording.swift */; };
+		BF5598EB24917352005DB9D6 /* PlayerStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5598EA24917352005DB9D6 /* PlayerStatus.swift */; };
+		BFBFDAB7249676C700EEA965 /* RecordingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBFDAB6249676C700EEA965 /* RecordingsViewController.swift */; };
+		BFBFDAB9249676EA00EEA965 /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBFDAB8249676EA00EEA965 /* RecordViewController.swift */; };
+		BFBFDABB2496771E00EEA965 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBFDABA2496771E00EEA965 /* AppCoordinator.swift */; };
+		BFBFDABD2496AC3900EEA965 /* RecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBFDABC2496AC3900EEA965 /* RecordView.swift */; };
+		BFBFDAC72496B44600EEA965 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BFBFDAC12496B44500EEA965 /* Montserrat-Regular.ttf */; };
+		BFBFDAC82496B44600EEA965 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BFBFDAC22496B44500EEA965 /* Montserrat-Medium.ttf */; };
+		BFBFDAC92496B44600EEA965 /* Montserrat-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BFBFDAC32496B44500EEA965 /* Montserrat-Light.ttf */; };
+		BFBFDACA2496B44600EEA965 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BFBFDAC42496B44500EEA965 /* Montserrat-Bold.ttf */; };
+		BFBFDACB2496B44600EEA965 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BFBFDAC52496B44500EEA965 /* Montserrat-SemiBold.ttf */; };
+		BFBFDACC2496B44600EEA965 /* Montserrat-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BFBFDAC62496B44600EEA965 /* Montserrat-Thin.ttf */; };
+		BFBFDACE2496B5AA00EEA965 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBFDACD2496B5AA00EEA965 /* Constants.swift */; };
+		BFBFDAD22496B7EE00EEA965 /* UIColorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBFDAD12496B7EE00EEA965 /* UIColorHelper.swift */; };
+		BFBFDAD42496BFF400EEA965 /* RecordingPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBFDAD32496BFF400EEA965 /* RecordingPlayer.swift */; };
+		BFBFDAD62496D38600EEA965 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBFDAD52496D38600EEA965 /* PlayerView.swift */; };
+		BFBFDAD82496F99C00EEA965 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBFDAD72496F99C00EEA965 /* AudioPlayer.swift */; };
+		BFBFDADD2498E8CC00EEA965 /* PlayingTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBFDADC2498E8CC00EEA965 /* PlayingTrack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +53,23 @@
 		BF5598E1248EEEDA005DB9D6 /* RecordingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingCollectionViewCell.swift; sourceTree = "<group>"; };
 		BF5598E3248EF2C4005DB9D6 /* RecordingsCollectionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingsCollectionLayout.swift; sourceTree = "<group>"; };
 		BF5598E5248EF9DC005DB9D6 /* Recording.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recording.swift; sourceTree = "<group>"; };
+		BF5598EA24917352005DB9D6 /* PlayerStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerStatus.swift; sourceTree = "<group>"; };
+		BFBFDAB6249676C700EEA965 /* RecordingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingsViewController.swift; sourceTree = "<group>"; };
+		BFBFDAB8249676EA00EEA965 /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
+		BFBFDABA2496771E00EEA965 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		BFBFDABC2496AC3900EEA965 /* RecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordView.swift; sourceTree = "<group>"; };
+		BFBFDAC12496B44500EEA965 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		BFBFDAC22496B44500EEA965 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
+		BFBFDAC32496B44500EEA965 /* Montserrat-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.ttf"; sourceTree = "<group>"; };
+		BFBFDAC42496B44500EEA965 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		BFBFDAC52496B44500EEA965 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
+		BFBFDAC62496B44600EEA965 /* Montserrat-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Thin.ttf"; sourceTree = "<group>"; };
+		BFBFDACD2496B5AA00EEA965 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		BFBFDAD12496B7EE00EEA965 /* UIColorHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorHelper.swift; sourceTree = "<group>"; };
+		BFBFDAD32496BFF400EEA965 /* RecordingPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingPlayer.swift; sourceTree = "<group>"; };
+		BFBFDAD52496D38600EEA965 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
+		BFBFDAD72496F99C00EEA965 /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
+		BFBFDADC2498E8CC00EEA965 /* PlayingTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingTrack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,7 +122,10 @@
 		BF5598C5248E8F83005DB9D6 /* AudioFoundationTest */ = {
 			isa = PBXGroup;
 			children = (
-				BF5598E0248EEEC1005DB9D6 /* New Group */,
+				BFBFDACF2496B7DB00EEA965 /* Extensions */,
+				BFBFDABE2496B41500EEA965 /* Resources */,
+				BFBFDAB3249676A200EEA965 /* Scenes */,
+				BF5598E92491733D005DB9D6 /* Domain */,
 				BF5598C6248E8F83005DB9D6 /* AppDelegate.swift */,
 				BF5598CA248E8F83005DB9D6 /* ViewController.swift */,
 				BF5598CF248E8F85005DB9D6 /* Assets.xcassets */,
@@ -99,16 +136,95 @@
 				BF5598DE248EEE67005DB9D6 /* RecordingsDataSource.swift */,
 				BF5598E1248EEEDA005DB9D6 /* RecordingCollectionViewCell.swift */,
 				BF5598E3248EF2C4005DB9D6 /* RecordingsCollectionLayout.swift */,
-				BF5598E5248EF9DC005DB9D6 /* Recording.swift */,
+				BFBFDABA2496771E00EEA965 /* AppCoordinator.swift */,
 			);
 			path = AudioFoundationTest;
 			sourceTree = "<group>";
 		};
-		BF5598E0248EEEC1005DB9D6 /* New Group */ = {
+		BF5598E92491733D005DB9D6 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				BF5598EA24917352005DB9D6 /* PlayerStatus.swift */,
+				BF5598E5248EF9DC005DB9D6 /* Recording.swift */,
+				BFBFDACD2496B5AA00EEA965 /* Constants.swift */,
 			);
-			path = "New Group";
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		BFBFDAB3249676A200EEA965 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				BFBFDAB5249676B200EEA965 /* Recordings */,
+				BFBFDAB4249676A700EEA965 /* Record */,
+			);
+			name = Scenes;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		BFBFDAB4249676A700EEA965 /* Record */ = {
+			isa = PBXGroup;
+			children = (
+				BFBFDAB8249676EA00EEA965 /* RecordViewController.swift */,
+				BFBFDABC2496AC3900EEA965 /* RecordView.swift */,
+				BFBFDAD32496BFF400EEA965 /* RecordingPlayer.swift */,
+				BFBFDAD52496D38600EEA965 /* PlayerView.swift */,
+				BFBFDAD72496F99C00EEA965 /* AudioPlayer.swift */,
+				BFBFDADC2498E8CC00EEA965 /* PlayingTrack.swift */,
+			);
+			path = Record;
+			sourceTree = "<group>";
+		};
+		BFBFDAB5249676B200EEA965 /* Recordings */ = {
+			isa = PBXGroup;
+			children = (
+				BFBFDAB6249676C700EEA965 /* RecordingsViewController.swift */,
+			);
+			path = Recordings;
+			sourceTree = "<group>";
+		};
+		BFBFDABE2496B41500EEA965 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BFBFDABF2496B41A00EEA965 /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BFBFDABF2496B41A00EEA965 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				BFBFDAC02496B42000EEA965 /* Montserrat */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		BFBFDAC02496B42000EEA965 /* Montserrat */ = {
+			isa = PBXGroup;
+			children = (
+				BFBFDAC42496B44500EEA965 /* Montserrat-Bold.ttf */,
+				BFBFDAC32496B44500EEA965 /* Montserrat-Light.ttf */,
+				BFBFDAC22496B44500EEA965 /* Montserrat-Medium.ttf */,
+				BFBFDAC12496B44500EEA965 /* Montserrat-Regular.ttf */,
+				BFBFDAC52496B44500EEA965 /* Montserrat-SemiBold.ttf */,
+				BFBFDAC62496B44600EEA965 /* Montserrat-Thin.ttf */,
+			);
+			path = Montserrat;
+			sourceTree = "<group>";
+		};
+		BFBFDACF2496B7DB00EEA965 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BFBFDAD02496B7E100EEA965 /* Views */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BFBFDAD02496B7E100EEA965 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BFBFDAD12496B7EE00EEA965 /* UIColorHelper.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,7 +287,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFBFDAC92496B44600EEA965 /* Montserrat-Light.ttf in Resources */,
+				BFBFDAC72496B44600EEA965 /* Montserrat-Regular.ttf in Resources */,
+				BFBFDACA2496B44600EEA965 /* Montserrat-Bold.ttf in Resources */,
+				BFBFDACB2496B44600EEA965 /* Montserrat-SemiBold.ttf in Resources */,
 				BF5598D3248E8F85005DB9D6 /* LaunchScreen.storyboard in Resources */,
+				BFBFDAC82496B44600EEA965 /* Montserrat-Medium.ttf in Resources */,
+				BFBFDACC2496B44600EEA965 /* Montserrat-Thin.ttf in Resources */,
 				BF5598D0248E8F85005DB9D6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -225,12 +347,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFBFDABB2496771E00EEA965 /* AppCoordinator.swift in Sources */,
 				BF5598E2248EEEDA005DB9D6 /* RecordingCollectionViewCell.swift in Sources */,
 				BF5598DF248EEE67005DB9D6 /* RecordingsDataSource.swift in Sources */,
 				BF5598E4248EF2C4005DB9D6 /* RecordingsCollectionLayout.swift in Sources */,
+				BFBFDAD62496D38600EEA965 /* PlayerView.swift in Sources */,
 				BF5598DD248EE80A005DB9D6 /* RecordingsCollectionView.swift in Sources */,
+				BFBFDAB7249676C700EEA965 /* RecordingsViewController.swift in Sources */,
+				BFBFDAB9249676EA00EEA965 /* RecordViewController.swift in Sources */,
+				BFBFDABD2496AC3900EEA965 /* RecordView.swift in Sources */,
 				BF5598CB248E8F83005DB9D6 /* ViewController.swift in Sources */,
+				BFBFDAD42496BFF400EEA965 /* RecordingPlayer.swift in Sources */,
+				BFBFDAD82496F99C00EEA965 /* AudioPlayer.swift in Sources */,
+				BF5598EB24917352005DB9D6 /* PlayerStatus.swift in Sources */,
 				BF5598C7248E8F83005DB9D6 /* AppDelegate.swift in Sources */,
+				BFBFDACE2496B5AA00EEA965 /* Constants.swift in Sources */,
+				BFBFDADD2498E8CC00EEA965 /* PlayingTrack.swift in Sources */,
+				BFBFDAD22496B7EE00EEA965 /* UIColorHelper.swift in Sources */,
 				BF5598DB248EA26A005DB9D6 /* AudioPlayerView.swift in Sources */,
 				BF5598E6248EF9DC005DB9D6 /* Recording.swift in Sources */,
 			);
