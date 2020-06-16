@@ -43,8 +43,14 @@ class RecordViewController: UIViewController {
             self.recordView?.hidePlayerView()
             self.recordView?.isRecording(true)
           } else if self.recordingPlayer?.playerStatusReactive.value == RecordingPlayerStatus.startRecording {
-            self.recordView?.showPlayerView()
             self.recordingPlayer?.stopRecording()
+
+            // Prepare player to play
+            if let url = self.recordingPlayer?.lastRecordingUrl {
+              self.audioPlayer.prepare(url: url)
+            }
+
+            self.recordView?.showPlayerView(totalTime: self.audioPlayer.playerDuration())
             self.recordView?.isRecording(false)
           }
         })
@@ -53,16 +59,13 @@ class RecordViewController: UIViewController {
       view.playPauseButton.rx.tapGesture()
         .when(.recognized)
         .subscribe { (_) in
-          if let url = self.recordingPlayer?.lastRecordingUrl {
-            switch self.audioPlayer.playerStatus.value {
-            case .iddle:
-              self.audioPlayer.play(url: url)
-            case .pause:
-              self.audioPlayer.resume()
-            case .playing:
-              self.audioPlayer.pause()
-            }
-            
+          switch self.audioPlayer.playerStatus.value {
+          case .iddle:
+            self.audioPlayer.play()
+          case .pause:
+            self.audioPlayer.resume()
+          case .playing:
+            self.audioPlayer.pause()
           }
       }
       .disposed(by: self.disposeBag)
@@ -83,19 +86,10 @@ class RecordViewController: UIViewController {
   }
 
   private func updateRecordingTime(_ recordingTime: Int) {
-    self.recordView?.timerLabel.text = self.parseTime(milliSeconds: recordingTime)
+    self.recordView?.timerLabel.text = Double(recordingTime).parseTime()
   }
   
   private func playingStatus(_ currentTime: TimeInterval, _ totalTime: TimeInterval) {
-    let percentage = Float(currentTime / totalTime)
-
-    self.recordView?.updateProgressPlaying(progress: percentage)
-  }
- 
-  private func parseTime(milliSeconds: Int) -> String {
-    let seconds = milliSeconds / 1000
-    let remainMilliSeconds = milliSeconds % 1000
-
-    return "\(seconds).\(String(remainMilliSeconds).padding(toLength: 3, withPad: "000", startingAt: 0))"
+    self.recordView?.updateProgressPlaying(total: totalTime, currentTime: currentTime)
   }
 }

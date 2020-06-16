@@ -40,21 +40,23 @@ class AudioPlayer: NSObject {
     }).disposed(by: self.disposeBag)
   }
 
-  func play(url: URL) {
+  func prepare(url: URL) {
     do {
       audioPlayer = try AVAudioPlayer(contentsOf: url)
       audioPlayer?.delegate = self
       audioPlayer?.volume = 1.0
       audioPlayer?.prepareToPlay()
-      
-      if (audioPlayer?.duration ?? 0.0) > 0.0 {
-        audioPlayer?.prepareToPlay()
-        audioPlayer?.play()
-        
-        self.playerStatus.accept(.playing)
-      }
     } catch {
       print("Error creating audio player")
+    }
+  }
+
+  func play() {
+    if (audioPlayer?.duration ?? 0.0) > 0.0 {
+      audioPlayer?.prepareToPlay()
+      audioPlayer?.play()
+      
+      self.playerStatus.accept(.playing)
     }
   }
   

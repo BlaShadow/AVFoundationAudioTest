@@ -131,10 +131,10 @@ class RecordView: UIView {
     }
   }
   
-  public func showPlayerView() {
+  public func showPlayerView(totalTime: TimeInterval) {
     DispatchQueue.main.async {
       UIView.animate(withDuration: 0.3) {
-        self.playerView.updateProgressPlaying(progress: 0.0)
+        self.playerView.updateProgressPlaying(total: totalTime, currentTime: 0.0)
         self.playerViewBottomConstraint?.constant = 10
         self.layoutIfNeeded()
       }
@@ -150,7 +150,7 @@ class RecordView: UIView {
     }
   }
   
-  public func updateProgressPlaying(progress: Float) {
-    self.playerView.updateProgressPlaying(progress: progress)
+  public func updateProgressPlaying(total: TimeInterval, currentTime: TimeInterval) {
+    self.playerView.updateProgressPlaying(total: total, currentTime: currentTime)
   }
 }

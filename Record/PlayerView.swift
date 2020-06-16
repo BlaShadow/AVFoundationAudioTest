@@ -44,6 +44,15 @@ class PlayerView: UIView {
     return view
   }()
   
+  let playingLabelStatus: UILabel = {
+    let label = UILabel()
+    label.translatesAutoresizingMaskIntoConstraints = false
+    label.textAlignment = .right
+    label.font = UIFont(name: FontNames.Montserrat.light, size: 12)
+
+    return label
+  }()
+  
   let playButton: UIView = {
     let view = UIImageView()
     view.translatesAutoresizingMaskIntoConstraints = false
@@ -95,6 +104,15 @@ class PlayerView: UIView {
       self.playingTrack.centerYAnchor.constraint(equalTo: self.playingContainer.centerYAnchor),
       self.playingTrack.rightAnchor.constraint(equalTo: self.playingContainer.rightAnchor, constant: -10)
     ])
+    
+    self.playingContainer.addSubview(self.playingLabelStatus)
+    
+    NSLayoutConstraint.activate([
+      self.playingLabelStatus.widthAnchor.constraint(equalToConstant: 100),
+      self.playingLabelStatus.heightAnchor.constraint(greaterThanOrEqualToConstant: 0),
+      self.playingLabelStatus.topAnchor.constraint(equalTo: self.playingTrack.bottomAnchor, constant: 0),
+      self.playingLabelStatus.rightAnchor.constraint(equalTo: self.playingTrack.rightAnchor, constant: 0)
+    ])
 
     self.addSubview(self.deleteButton)
 
@@ -119,7 +137,12 @@ class PlayerView: UIView {
     fatalError("init(coder:) has not been implemented")
   }
   
-  public func updateProgressPlaying(progress: Float) {
+  public func updateProgressPlaying(total: TimeInterval, currentTime: TimeInterval) {
+    let progress = currentTime == 0 ? Float(0.0) : Float(currentTime / total)
+    let currentTime = currentTime.parseTimeSeconds()
+    let totalTime = total.parseTimeSeconds()
+
+    self.playingLabelStatus.text = "\(currentTime) / \(totalTime)"
     self.playingTrack.updateProgress(progress: progress)
    }
 }
