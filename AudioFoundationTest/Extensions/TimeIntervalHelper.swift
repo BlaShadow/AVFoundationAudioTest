@@ -8,14 +8,18 @@
 
 import UIKit
 
-class TimeIntervalHelper: UIView {
+extension TimeInterval {
+  func parseTime() -> String {
+    let seconds = Int(self) / 1000
+    let remainMilliSeconds = Int(self) % 1000
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
+    return "\(seconds).\(String(remainMilliSeconds).padding(toLength: 3, withPad: "000", startingAt: 0))"
+  }
+  
+  func parseTimeSeconds() -> String {
+    let minutes = Int(self) / 60
+    let seconds = Int(self) % 60
 
+    return "\(minutes):\(String(format: "%02d", seconds))"
+  }
 }
