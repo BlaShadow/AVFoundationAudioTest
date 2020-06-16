@@ -12,6 +12,7 @@ import AVFoundation
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
   var window: UIWindow?
+  var appCoordinator: AppCoordinator?
   
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     
@@ -20,13 +21,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     if let window = window {
       window.makeKeyAndVisible()
       window.backgroundColor = UIColor.white
-      
-      let mainTabBarController = ViewController()
-      
-      window.rootViewController = mainTabBarController
+
+      self.appCoordinator = AppCoordinator()
+      window.rootViewController = self.appCoordinator?.tabBarController()
     }
-    
-    
+
     do {
       let session = AVAudioSession.sharedInstance()
       try session.setCategory(.playAndRecord, mode: .spokenAudio, options: .defaultToSpeaker)
