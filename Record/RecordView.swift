@@ -52,6 +52,14 @@ class RecordView: UIView {
   var playPauseButton: UIView {
     return self.playerView.playButton
   }
+  
+  var saveButton: UIView {
+    return self.playerView.saveButton
+  }
+  
+  var deleteButton: UIView {
+    return self.playerView.deleteButton
+  }
 
   override init(frame: CGRect) {
     super.init(frame: frame)

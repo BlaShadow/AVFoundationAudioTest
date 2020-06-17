@@ -39,6 +39,7 @@ class RecordViewController: UIViewController {
         .subscribe(onNext: { _ in
 
           if self.recordingPlayer?.playerStatusReactive.value == RecordingPlayerStatus.iddle {
+            self.attempSaveLastRecording()
             self.recordingPlayer?.startRecording()
             self.recordView?.hidePlayerView()
             self.recordView?.isRecording(true)
@@ -69,6 +70,23 @@ class RecordViewController: UIViewController {
           }
       }
       .disposed(by: self.disposeBag)
+      
+      // Delete Current recording action
+      view.deleteButton.rx.tapGesture()
+        .when(.recognized)
+        .subscribe { (_) in
+          self.recordingPlayer?.clearLastRecording()
+      }
+      .disposed(by: self.disposeBag)
+      
+      // Save recording action
+      view.saveButton.rx.tapGesture()
+        .when(.recognized)
+        .subscribe { (_) in
+          self.attempSaveLastRecording()
+          self.recordingPlayer?.clearLastRecording()
+      }
+      .disposed(by: self.disposeBag)
     }
     
     self.audioPlayer.playerStatus
@@ -83,6 +101,16 @@ class RecordViewController: UIViewController {
         }
       })
       .disposed(by: self.disposeBag)
+  }
+  
+  private func attempSaveLastRecording() {
+    if let recording = self.recordingPlayer?.lastRecording {
+      // Last last recording
+      DataBaseAcess.saveRecording(recording: recording)
+
+      // Clear last recording references
+      self.recordingPlayer?.clearLastRecording()
+    }
   }
 
   private func updateRecordingTime(_ recordingTime: Int) {
