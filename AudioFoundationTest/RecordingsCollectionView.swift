@@ -15,7 +15,8 @@ class RecordingsCollectionView: UIView {
     
     let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
     view.translatesAutoresizingMaskIntoConstraints = false
-    view.backgroundColor = UIColor.green
+    view.backgroundColor = UIColor.white
+    view.showsVerticalScrollIndicator = false
 
     return view 
   }()

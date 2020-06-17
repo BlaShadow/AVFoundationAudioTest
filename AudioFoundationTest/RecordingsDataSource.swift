@@ -24,6 +24,10 @@ class RecordingsDataSource: NSObject, UICollectionViewDataSource {
       return UICollectionViewCell(frame: .zero)
     }
 
+    let recording = self.items[indexPath.row]
+
+    cell.bindData(recording: recording)
+
     return cell
   }
 }
