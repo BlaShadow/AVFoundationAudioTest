@@ -9,6 +9,7 @@
 import UIKit
 
 enum RecordingPlayerStatus: String {
+  case initial
   case iddle
   case startRecording
   case stopRecording

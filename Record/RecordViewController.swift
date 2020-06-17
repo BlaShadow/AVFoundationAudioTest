@@ -23,6 +23,14 @@ class RecordViewController: UIViewController {
     self.recordingPlayer?.currentRecordingTime = self.updateRecordingTime
     self.recordView = RecordView(frame: .zero)
     self.audioPlayer.playingStatus = self.playingStatus
+
+    self.recordingPlayer?.playerStatusReactive.subscribe(onNext: { (status) in
+      if status == .initial {
+        self.recordView?.hidePlayerView()
+        self.recordView?.resetTimer()
+      }
+    })
+    .disposed(by: self.disposeBag)
     
     if let view = self.recordView {
       self.view.addSubview(view)
@@ -38,7 +46,7 @@ class RecordViewController: UIViewController {
         .when(.recognized)
         .subscribe(onNext: { _ in
 
-          if self.recordingPlayer?.playerStatusReactive.value == RecordingPlayerStatus.iddle {
+          if self.recordingPlayer?.playerStatusReactive.value == RecordingPlayerStatus.initial {
             self.attempSaveLastRecording()
             self.recordingPlayer?.startRecording()
             self.recordView?.hidePlayerView()

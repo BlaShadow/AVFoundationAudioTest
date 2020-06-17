@@ -18,7 +18,7 @@ class RecordingPlayer: NSObject {
   var statusTimer: Disposable?
   
   var audioRecorder: AVAudioRecorder?
-  var playerStatusReactive = BehaviorRelay<RecordingPlayerStatus>(value: .iddle)
+  var playerStatusReactive = BehaviorRelay<RecordingPlayerStatus>(value: .initial)
   var currentRecordingTime: ((_ time: Int) -> Void)?
 
   override init() {
@@ -90,7 +90,7 @@ class RecordingPlayer: NSObject {
     self.lastRecording = nil
     self.lastRecordingUrl = nil
 
-    self.playerStatusReactive.accept(.iddle)
+    self.playerStatusReactive.accept(.initial)
   }
 }
 

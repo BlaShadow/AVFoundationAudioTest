@@ -149,6 +149,10 @@ class RecordView: UIView {
     }
   }
   
+  public func resetTimer() {
+    self.timerLabel.text = "00:00:00.000"
+  }
+
   public func hidePlayerView() {
     DispatchQueue.main.async {
       UIView.animate(withDuration: 0.3) {
