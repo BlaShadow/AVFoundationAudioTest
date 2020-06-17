@@ -36,6 +36,7 @@
 		BFBFDAD82496F99C00EEA965 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBFDAD72496F99C00EEA965 /* AudioPlayer.swift */; };
 		BFBFDADD2498E8CC00EEA965 /* PlayingTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBFDADC2498E8CC00EEA965 /* PlayingTrack.swift */; };
 		BFBFDADF2499780900EEA965 /* TimeIntervalHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBFDADE2499780900EEA965 /* TimeIntervalHelper.swift */; };
+		BFBFDAE3249997CE00EEA965 /* DataBaseAcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBFDAE2249997CE00EEA965 /* DataBaseAcess.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,7 @@
 		BFBFDAD72496F99C00EEA965 /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
 		BFBFDADC2498E8CC00EEA965 /* PlayingTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingTrack.swift; sourceTree = "<group>"; };
 		BFBFDADE2499780900EEA965 /* TimeIntervalHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeIntervalHelper.swift; sourceTree = "<group>"; };
+		BFBFDAE2249997CE00EEA965 /* DataBaseAcess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseAcess.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 		BF5598C5248E8F83005DB9D6 /* AudioFoundationTest */ = {
 			isa = PBXGroup;
 			children = (
+				BFBFDAE0249997B700EEA965 /* Data */,
 				BFBFDACF2496B7DB00EEA965 /* Extensions */,
 				BFBFDABE2496B41500EEA965 /* Resources */,
 				BFBFDAB3249676A200EEA965 /* Scenes */,
@@ -228,6 +231,22 @@
 				BFBFDAD12496B7EE00EEA965 /* UIColorHelper.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		BFBFDAE0249997B700EEA965 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				BFBFDAE1249997BE00EEA965 /* Local */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		BFBFDAE1249997BE00EEA965 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				BFBFDAE2249997CE00EEA965 /* DataBaseAcess.swift */,
+			);
+			path = Local;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -370,6 +389,7 @@
 				BFBFDAD22496B7EE00EEA965 /* UIColorHelper.swift in Sources */,
 				BF5598DB248EA26A005DB9D6 /* AudioPlayerView.swift in Sources */,
 				BF5598E6248EF9DC005DB9D6 /* Recording.swift in Sources */,
+				BFBFDAE3249997CE00EEA965 /* DataBaseAcess.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

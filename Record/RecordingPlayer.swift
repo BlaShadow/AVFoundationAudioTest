@@ -14,6 +14,7 @@ import RxCocoa
 class RecordingPlayer: NSObject {
   let disposeBag = DisposeBag()
   var lastRecordingUrl: URL?
+  var lastRecording: Recording?
   var statusTimer: Disposable?
   
   var audioRecorder: AVAudioRecorder?
@@ -84,15 +85,32 @@ class RecordingPlayer: NSObject {
 
     self.audioRecorder?.stop()
   }
+  
+  func clearLastRecording() {
+    self.lastRecording = nil
+    self.lastRecordingUrl = nil
+
+    self.playerStatusReactive.accept(.iddle)
+  }
 }
 
 extension RecordingPlayer: AVAudioRecorderDelegate {
   func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
     if flag, let url = self.lastRecordingUrl {
-      let seconds = recorder.currentTime
-      let name = "Recording"
+      
+      do {
+        let player = try? AVAudioPlayer(contentsOf: recorder.url)
+        let duration = player?.duration ?? 0.0
+        let name = "Recording"
 
-      let lastRecording = Recording(name: name, path: url, duration: seconds)
+        self.lastRecording = Recording()
+
+        self.lastRecording?.name = name
+        self.lastRecording?.path = url.absoluteString
+        self.lastRecording?.duration = duration
+      } catch {
+        print("Error finish recording \(error)")
+      }
     }
   }
 }
