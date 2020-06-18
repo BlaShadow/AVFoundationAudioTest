@@ -35,9 +35,12 @@ class AudioPlayerComponent: UIView {
         switch self.audioPlayer.playerStatus.value {
         case .iddle:
           self.audioPlayer.play()
+          self.componentView.isPlaying(value: true)
         case .playing:
           self.audioPlayer.pause()
+          self.componentView.isPlaying(value: false)
         case .pause:
+          self.componentView.isPlaying(value: true)
           self.audioPlayer.resume()
         }
       }

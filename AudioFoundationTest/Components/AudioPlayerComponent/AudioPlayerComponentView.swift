@@ -28,11 +28,22 @@ class AudioPlayerComponentView: UIView {
   let playButton: UIView = {
     let view = UIImageView()
     view.translatesAutoresizingMaskIntoConstraints = false
-    view.image = UIImage(named: "play")
-    view.highlightedImage = UIImage(named: "pause")
-    view.isUserInteractionEnabled = true
+    view.image = UIImage(named: "play")?.withRenderingMode(.alwaysTemplate)
+    view.tintColor = UIColor.white
+    view.highlightedImage = UIImage(named: "pause")?.withRenderingMode(.alwaysTemplate)
+    
+    let container = UIView(frame: .zero)
+    container.translatesAutoresizingMaskIntoConstraints = false
+    container.isUserInteractionEnabled = true
+    container.backgroundColor = UIColor(rgb: 0x7641ca)
+    container.layer.cornerRadius = 20
 
-    return view
+    container.addSubview(view)
+    NSLayoutConstraint.size(view: view, width: 20, height: 20)
+    NSLayoutConstraint.centerInParent(view: view)
+    
+
+    return container
   }()
 
   let playingTrack: PlayingTrack = PlayingTrack()
@@ -46,9 +57,8 @@ class AudioPlayerComponentView: UIView {
   }
 
   private func setupView() {
-    self.layer.cornerRadius = 10
     self.clipsToBounds = true
-    self.backgroundColor = UIColor.green
+    self.backgroundColor = UIColor(rgb: 0xcde6a5)
     
     self.addSubview(self.playingContainer)
     
@@ -56,14 +66,14 @@ class AudioPlayerComponentView: UIView {
       self.playingContainer.widthAnchor.constraint(equalTo: self.widthAnchor),
       self.playingContainer.heightAnchor.constraint(equalToConstant: 50),
       self.playingContainer.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-      self.playingContainer.topAnchor.constraint(equalTo: self.topAnchor)
+      self.playingContainer.centerYAnchor.constraint(equalTo: self.centerYAnchor)
     ])
     
     self.playingContainer.addSubview(self.playButton)
     
     NSLayoutConstraint.activate([
-      self.playButton.widthAnchor.constraint(equalToConstant: 20),
-      self.playButton.heightAnchor.constraint(equalToConstant: 20),
+      self.playButton.widthAnchor.constraint(equalToConstant: 40),
+      self.playButton.heightAnchor.constraint(equalToConstant: 40),
       self.playButton.centerYAnchor.constraint(equalTo: self.playingContainer.centerYAnchor),
       self.playButton.leftAnchor.constraint(equalTo: self.playingContainer.leftAnchor, constant: 10)
     ])
@@ -92,11 +102,23 @@ class AudioPlayerComponentView: UIView {
   }
   
   public func updateProgressPlaying(total: TimeInterval, currentTime: TimeInterval) {
-    let progress = currentTime == 0 ? Float(0.0) : Float(currentTime / total)
+    var progress = currentTime == 0 ? Float(0.0) : Float(currentTime / total)
+    
+    if progress > Float(0.98) {
+      progress = Float(1.0)
+    }
+    
     let currentTime = currentTime.parseTimeSeconds()
     let totalTime = total.parseTimeSeconds()
 
+    self.isPlaying(value: progress > Float(0) && progress < Float(0.98))
     self.playingLabelStatus.text = "\(currentTime) / \(totalTime)"
     self.playingTrack.updateProgress(progress: progress)
    }
+
+  public func isPlaying(value: Bool) {
+    if let imageView = self.playButton.subviews.first as? UIImageView {
+      imageView.isHighlighted = value
+    }
+  }
 }
