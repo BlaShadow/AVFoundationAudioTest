@@ -47,7 +47,7 @@ class AudioPlayer: NSObject {
       audioPlayer?.volume = 1.0
       audioPlayer?.prepareToPlay()
     } catch {
-      print("Error creating audio player")
+      print("Error creating audio player \(error)")
     }
   }
 
@@ -82,8 +82,6 @@ class AudioPlayer: NSObject {
 extension AudioPlayer: AVAudioPlayerDelegate {
   func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
     self.playerStatus.accept(.iddle)
-
-    print("Playing got stopped")
   }
 }
 
