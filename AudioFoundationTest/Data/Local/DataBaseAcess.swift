@@ -14,7 +14,6 @@ class DataBaseAcess {
 
     try! realm.write {
       realm.add(recording)
-      print("Recording saved! \(recording.duration)")
     }
   }
   
