@@ -20,6 +20,6 @@ extension TimeInterval {
     let minutes = Int(self) / 60
     let seconds = Int(self) % 60
 
-    return "\(minutes):\(String(format: "%02d", seconds))"
+    return "\(String(format: "%02d", minutes)):\(String(format: "%02d", seconds))"
   }
 }
