@@ -14,7 +14,25 @@ extension NSLayoutConstraint {
 
     NSLayoutConstraint.activate([
       view.widthAnchor.constraint(equalTo: parent.widthAnchor),
-      view.heightAnchor.constraint(equalTo: parent.heightAnchor),
+      view.heightAnchor.constraint(equalTo: parent.heightAnchor)
+    ])
+
+    NSLayoutConstraint.centerInParent(view: view)
+  }
+
+  static func size(view: UIView, width: CGFloat, height: CGFloat) {
+    NSLayoutConstraint.activate([
+      view.widthAnchor.constraint(equalToConstant: width),
+      view.heightAnchor.constraint(equalToConstant: height)
+    ])
+  }
+  
+  static func centerInParent(view: UIView) {
+    guard let parent = view.superview else {
+      return 
+    }
+
+    NSLayoutConstraint.activate([
       view.centerXAnchor.constraint(equalTo: parent.centerXAnchor),
       view.centerYAnchor.constraint(equalTo: parent.centerYAnchor)
     ])
