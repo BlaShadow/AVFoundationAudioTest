@@ -40,6 +40,14 @@ class RecordingCollectionViewCell: UICollectionViewCell {
 
     return label
   }()
+  
+  var clockImageView: UIImageView = {
+    let imageView = UIImageView()
+    imageView.image = UIImage(named: "clock")
+    imageView.translatesAutoresizingMaskIntoConstraints = false
+
+    return imageView
+  }()
 
   var durationLabel: UILabel = {
     let label = UILabel()
@@ -84,14 +92,23 @@ class RecordingCollectionViewCell: UICollectionViewCell {
       self.nameLabel.topAnchor.constraint(equalTo: self.container.topAnchor, constant: 10),
       self.nameLabel.leftAnchor.constraint(equalTo: self.container.leftAnchor, constant: 10)
     ])
+    
+    self.container.addSubview(self.clockImageView)
+    
+    NSLayoutConstraint.activate([
+      self.clockImageView.widthAnchor.constraint(equalToConstant: 14),
+      self.clockImageView.heightAnchor.constraint(equalToConstant: 14),
+      self.clockImageView.leftAnchor.constraint(equalTo: self.nameLabel.leftAnchor),
+      self.clockImageView.topAnchor.constraint(equalTo: self.nameLabel.bottomAnchor, constant: 5)
+    ])
 
     self.container.addSubview(self.createdDateLabel)
 
     NSLayoutConstraint.activate([
       self.createdDateLabel.widthAnchor.constraint(equalTo: self.container.widthAnchor, multiplier: 0.8),
       self.createdDateLabel.heightAnchor.constraint(greaterThanOrEqualToConstant: 0),
-      self.createdDateLabel.topAnchor.constraint(equalTo: self.nameLabel.bottomAnchor, constant: 5),
-      self.createdDateLabel.leftAnchor.constraint(equalTo: self.nameLabel.leftAnchor)
+      self.createdDateLabel.centerYAnchor.constraint(equalTo: self.clockImageView.centerYAnchor),
+      self.createdDateLabel.leftAnchor.constraint(equalTo: self.clockImageView.rightAnchor, constant: 5)
     ])
   }
 
