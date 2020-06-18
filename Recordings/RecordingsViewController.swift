@@ -20,6 +20,7 @@ class RecordingsViewController: UIViewController {
     super.viewDidLoad()
 
     self.recordingsView = RecordingsCollectionView()
+    self.layoutDelegate.selectionHandler = self.recordingClickHandler
 
     if let view = self.recordingsView {
       self.view.addSubview(view)
@@ -36,6 +37,15 @@ class RecordingsViewController: UIViewController {
       view.collectionView.delegate = self.layoutDelegate
       view.collectionView.reloadData()
     }
+  }
+  
+  private func recordingClickHandler(_ index: Int) {
+    let path = self.recordings[index].path
+
+    // Setup player
+    let urlString = RoutersHelper.urlForRecordingAudio(path)?.absoluteString
+    self.recordingsView?.playerView.setupPlayer(url: urlString ?? "")
+    self.recordingsView?.displayAudioPlayer()
   }
   
   override func viewWillAppear(_ animated: Bool) {

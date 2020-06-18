@@ -52,11 +52,11 @@ class RecordingPlayer: NSObject {
     ]
 
     do {
-      guard let documentsPathURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
+      guard let recordingUrl = RoutersHelper.urlForRecordingAudio() else {
         return
       }
       
-      self.lastRecordingUrl = documentsPathURL.appendingPathComponent("\(Date.timeIntervalSinceReferenceDate).pcm")
+      self.lastRecordingUrl = recordingUrl
 
       audioRecorder = try AVAudioRecorder(url: self.lastRecordingUrl!, settings: recordSettings)
       audioRecorder?.delegate = self
@@ -102,11 +102,13 @@ extension RecordingPlayer: AVAudioRecorderDelegate {
         let player = try? AVAudioPlayer(contentsOf: recorder.url)
         let duration = player?.duration ?? 0.0
         let name = "Recording"
-
+        
         self.lastRecording = Recording()
 
+        let routeName = url.absoluteString.split(separator: "/").last ?? ""
+        
         self.lastRecording?.name = name
-        self.lastRecording?.path = url.absoluteString
+        self.lastRecording?.path = String(routeName)
         self.lastRecording?.duration = duration
       } catch {
         print("Error finish recording \(error)")

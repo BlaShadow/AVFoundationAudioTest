@@ -9,6 +9,8 @@
 import UIKit
 
 class RecordingsCollectionView: UIView {
+  private var audioPlayerbottomConstraint: NSLayoutConstraint?
+
   var collectionView: UICollectionView = {
     let layout = UICollectionViewFlowLayout()
     layout.scrollDirection = .vertical
@@ -21,6 +23,8 @@ class RecordingsCollectionView: UIView {
     return view 
   }()
 
+  let playerView = AudioPlayerComponent(frame: .zero)
+  
   override init(frame: CGRect) {
     super.init(frame: frame)
     
@@ -43,5 +47,30 @@ class RecordingsCollectionView: UIView {
       self.collectionView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
       self.collectionView.centerXAnchor.constraint(equalTo: self.centerXAnchor)
     ])
+    
+    self.addSubview(self.playerView)
+
+    self.audioPlayerbottomConstraint = self.playerView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 160)
+    self.audioPlayerbottomConstraint?.isActive = true
+    
+    NSLayoutConstraint.activate([
+      self.playerView.heightAnchor.constraint(equalToConstant: 160),
+      self.playerView.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.95),
+      self.playerView.centerXAnchor.constraint(equalTo: self.centerXAnchor)
+    ])
+  }
+  
+  public func displayAudioPlayer() {
+    UIView.animate(withDuration: 0.3) {
+      self.audioPlayerbottomConstraint?.constant = 0
+      self.layoutIfNeeded()
+    }
+  }
+  
+  public func hideAudioPlayer() {
+    UIView.animate(withDuration: 0.3) {
+      self.audioPlayerbottomConstraint?.constant = 160
+      self.layoutIfNeeded()
+    }
   }
 }
