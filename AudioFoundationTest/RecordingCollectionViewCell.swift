@@ -25,6 +25,7 @@ class RecordingCollectionViewCell: UICollectionViewCell {
 
   var nameLabel: UILabel = {
     let label = UILabel()
+    label.font = UIFont(name: FontNames.Montserrat.regular, size: 14)
     label.translatesAutoresizingMaskIntoConstraints = false
     label.numberOfLines = 0
     label.text = "Name label"

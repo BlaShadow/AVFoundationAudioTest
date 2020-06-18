@@ -11,7 +11,7 @@ import UIKit
 class PlayingTrack: UIView {
   private let progressTrack: UIView = {
     let view = UIView()
-    view.backgroundColor = UIColor.red
+    view.backgroundColor = UIColor(rgb: 0x22222A)
     view.frame = CGRect.zero
 
     return view
