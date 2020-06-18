@@ -26,6 +26,8 @@ class AppCoordinator {
   private func setupTabBar() {
     self.recordViewController.tabBarItem = UITabBarItem(title: "Record", image: UIImage(named: "tabBarRecord"), tag: 0)
     self.recordingsViewController.tabBarItem = UITabBarItem(title: "Recordings", image: UIImage(named: "tabBarRecordings"), tag: 1)
+    self.recordingsViewController.edgesForExtendedLayout = []
+    self.recordingsViewController.extendedLayoutIncludesOpaqueBars = false
 
     self.tabViewController.viewControllers = [self.recordViewController, self.recordingsViewController]
   }
