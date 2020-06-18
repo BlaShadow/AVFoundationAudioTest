@@ -26,10 +26,10 @@ extension NSLayoutConstraint {
       view.heightAnchor.constraint(equalToConstant: height)
     ])
   }
-  
+
   static func centerInParent(view: UIView) {
     guard let parent = view.superview else {
-      return 
+      return
     }
 
     NSLayoutConstraint.activate([

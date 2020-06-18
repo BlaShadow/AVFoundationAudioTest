@@ -21,7 +21,7 @@ class RecordingsCollectionView: UIView {
     view.backgroundColor = UIColor(rgb: 0xEEEFF0)
     view.showsVerticalScrollIndicator = false
 
-    return view 
+    return view
   }()
 
   let playerView = AudioPlayerComponent(frame: .zero)
@@ -50,7 +50,8 @@ class RecordingsCollectionView: UIView {
 
     self.addSubview(self.playerView)
 
-    self.audioPlayerbottomConstraint = self.playerView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: self.playerHeight)
+    self.audioPlayerbottomConstraint = self.playerView.bottomAnchor.constraint(equalTo: self.bottomAnchor,
+                                                                               constant: self.playerHeight)
     self.audioPlayerbottomConstraint?.isActive = true
 
     NSLayoutConstraint.activate([
@@ -66,7 +67,7 @@ class RecordingsCollectionView: UIView {
       self.layoutIfNeeded()
     }
   }
-  
+
   public func hideAudioPlayer() {
     UIView.animate(withDuration: 0.3) {
       self.audioPlayerbottomConstraint?.constant = self.playerHeight

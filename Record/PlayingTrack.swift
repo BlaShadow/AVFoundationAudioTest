@@ -22,7 +22,7 @@ class PlayingTrack: UIView {
 
     self.translatesAutoresizingMaskIntoConstraints = false
     self.backgroundColor = UIColor.lightGray
-    
+
     self.addSubview(self.progressTrack)
   }
 
@@ -33,7 +33,7 @@ class PlayingTrack: UIView {
 
     self.layer.cornerRadius = height / 2
   }
-  
+
   public func updateProgress(progress: Float) {
     let width = self.bounds.width * CGFloat(progress)
     let height = self.bounds.height
@@ -41,7 +41,7 @@ class PlayingTrack: UIView {
     self.progressTrack.frame = CGRect(x: 0, y: 0, width: width, height: height)
     self.progressTrack.layer.cornerRadius = height / 2
   }
-  
+
   required init?(coder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }

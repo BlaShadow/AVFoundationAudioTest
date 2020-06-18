@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		7C050CB0BDFC27A0B3556D3F /* Pods_AudioFoundationTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32FAF73E278E1719610C2021 /* Pods_AudioFoundationTest.framework */; };
 		BF5598C7248E8F83005DB9D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5598C6248E8F83005DB9D6 /* AppDelegate.swift */; };
-		BF5598CB248E8F83005DB9D6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5598CA248E8F83005DB9D6 /* ViewController.swift */; };
 		BF5598D0248E8F85005DB9D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF5598CF248E8F85005DB9D6 /* Assets.xcassets */; };
 		BF5598D3248E8F85005DB9D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF5598D1248E8F85005DB9D6 /* LaunchScreen.storyboard */; };
 		BF5598DB248EA26A005DB9D6 /* AudioPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5598DA248EA26A005DB9D6 /* AudioPlayerView.swift */; };
@@ -37,6 +36,11 @@
 		BFBFDADD2498E8CC00EEA965 /* PlayingTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBFDADC2498E8CC00EEA965 /* PlayingTrack.swift */; };
 		BFBFDADF2499780900EEA965 /* TimeIntervalHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBFDADE2499780900EEA965 /* TimeIntervalHelper.swift */; };
 		BFBFDAE3249997CE00EEA965 /* DataBaseAcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBFDAE2249997CE00EEA965 /* DataBaseAcess.swift */; };
+		BFBFDAE6249AE78000EEA965 /* RecordingPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBFDAE5249AE78000EEA965 /* RecordingPlayerViewController.swift */; };
+		BFBFDAEA249B09C300EEA965 /* AudioPlayerComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBFDAE9249B09C300EEA965 /* AudioPlayerComponent.swift */; };
+		BFBFDAEC249B0A0900EEA965 /* AudioPlayerComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBFDAEB249B0A0900EEA965 /* AudioPlayerComponentView.swift */; };
+		BFBFDAEE249B0A7400EEA965 /* LayoutConstraintHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBFDAED249B0A7400EEA965 /* LayoutConstraintHelper.swift */; };
+		BFBFDAF1249B81E600EEA965 /* RoutersHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBFDAF0249B81E600EEA965 /* RoutersHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,7 +49,6 @@
 		6DE70B600E3C400CFB6AD785 /* Pods-AudioFoundationTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AudioFoundationTest.debug.xcconfig"; path = "Target Support Files/Pods-AudioFoundationTest/Pods-AudioFoundationTest.debug.xcconfig"; sourceTree = "<group>"; };
 		BF5598C3248E8F83005DB9D6 /* Recording.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recording.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF5598C6248E8F83005DB9D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BF5598CA248E8F83005DB9D6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BF5598CF248E8F85005DB9D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF5598D2248E8F85005DB9D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF5598D4248E8F85005DB9D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -74,6 +77,11 @@
 		BFBFDADC2498E8CC00EEA965 /* PlayingTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingTrack.swift; sourceTree = "<group>"; };
 		BFBFDADE2499780900EEA965 /* TimeIntervalHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeIntervalHelper.swift; sourceTree = "<group>"; };
 		BFBFDAE2249997CE00EEA965 /* DataBaseAcess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseAcess.swift; sourceTree = "<group>"; };
+		BFBFDAE5249AE78000EEA965 /* RecordingPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingPlayerViewController.swift; sourceTree = "<group>"; };
+		BFBFDAE9249B09C300EEA965 /* AudioPlayerComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerComponent.swift; sourceTree = "<group>"; };
+		BFBFDAEB249B0A0900EEA965 /* AudioPlayerComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerComponentView.swift; sourceTree = "<group>"; };
+		BFBFDAED249B0A7400EEA965 /* LayoutConstraintHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutConstraintHelper.swift; sourceTree = "<group>"; };
+		BFBFDAF0249B81E600EEA965 /* RoutersHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutersHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,13 +134,13 @@
 		BF5598C5248E8F83005DB9D6 /* AudioFoundationTest */ = {
 			isa = PBXGroup;
 			children = (
+				BFBFDAE7249B096000EEA965 /* Components */,
 				BFBFDAE0249997B700EEA965 /* Data */,
 				BFBFDACF2496B7DB00EEA965 /* Extensions */,
 				BFBFDABE2496B41500EEA965 /* Resources */,
 				BFBFDAB3249676A200EEA965 /* Scenes */,
 				BF5598E92491733D005DB9D6 /* Domain */,
 				BF5598C6248E8F83005DB9D6 /* AppDelegate.swift */,
-				BF5598CA248E8F83005DB9D6 /* ViewController.swift */,
 				BF5598CF248E8F85005DB9D6 /* Assets.xcassets */,
 				BF5598D1248E8F85005DB9D6 /* LaunchScreen.storyboard */,
 				BF5598D4248E8F85005DB9D6 /* Info.plist */,
@@ -159,6 +167,7 @@
 		BFBFDAB3249676A200EEA965 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				BFBFDAE4249AE76700EEA965 /* RecordingPlayer */,
 				BFBFDAB5249676B200EEA965 /* Recordings */,
 				BFBFDAB4249676A700EEA965 /* Record */,
 			);
@@ -173,7 +182,6 @@
 				BFBFDABC2496AC3900EEA965 /* RecordView.swift */,
 				BFBFDAD32496BFF400EEA965 /* RecordingPlayer.swift */,
 				BFBFDAD52496D38600EEA965 /* PlayerView.swift */,
-				BFBFDAD72496F99C00EEA965 /* AudioPlayer.swift */,
 				BFBFDADC2498E8CC00EEA965 /* PlayingTrack.swift */,
 			);
 			path = Record;
@@ -221,6 +229,7 @@
 			children = (
 				BFBFDAD02496B7E100EEA965 /* Views */,
 				BFBFDADE2499780900EEA965 /* TimeIntervalHelper.swift */,
+				BFBFDAF0249B81E600EEA965 /* RoutersHelper.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -229,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				BFBFDAD12496B7EE00EEA965 /* UIColorHelper.swift */,
+				BFBFDAED249B0A7400EEA965 /* LayoutConstraintHelper.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -249,6 +259,40 @@
 			path = Local;
 			sourceTree = "<group>";
 		};
+		BFBFDAE4249AE76700EEA965 /* RecordingPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				BFBFDAE5249AE78000EEA965 /* RecordingPlayerViewController.swift */,
+			);
+			path = RecordingPlayer;
+			sourceTree = "<group>";
+		};
+		BFBFDAE7249B096000EEA965 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				BFBFDAEF249B0B4100EEA965 /* AudioPlayer */,
+				BFBFDAE8249B098900EEA965 /* AudioPlayerComponent */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		BFBFDAE8249B098900EEA965 /* AudioPlayerComponent */ = {
+			isa = PBXGroup;
+			children = (
+				BFBFDAE9249B09C300EEA965 /* AudioPlayerComponent.swift */,
+				BFBFDAEB249B0A0900EEA965 /* AudioPlayerComponentView.swift */,
+			);
+			path = AudioPlayerComponent;
+			sourceTree = "<group>";
+		};
+		BFBFDAEF249B0B4100EEA965 /* AudioPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				BFBFDAD72496F99C00EEA965 /* AudioPlayer.swift */,
+			);
+			path = AudioPlayer;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -261,6 +305,7 @@
 				BF5598C0248E8F83005DB9D6 /* Frameworks */,
 				BF5598C1248E8F83005DB9D6 /* Resources */,
 				374C1B8D244E85F1975D0E70 /* [CP] Embed Pods Frameworks */,
+				BFBFDAF2249BD9B600EEA965 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -340,6 +385,24 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AudioFoundationTest/Pods-AudioFoundationTest-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		BFBFDAF2249BD9B600EEA965 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
 		F5D3B290F79DB64328B9C00E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -379,10 +442,12 @@
 				BFBFDADF2499780900EEA965 /* TimeIntervalHelper.swift in Sources */,
 				BFBFDAB9249676EA00EEA965 /* RecordViewController.swift in Sources */,
 				BFBFDABD2496AC3900EEA965 /* RecordView.swift in Sources */,
-				BF5598CB248E8F83005DB9D6 /* ViewController.swift in Sources */,
 				BFBFDAD42496BFF400EEA965 /* RecordingPlayer.swift in Sources */,
 				BFBFDAD82496F99C00EEA965 /* AudioPlayer.swift in Sources */,
 				BF5598EB24917352005DB9D6 /* PlayerStatus.swift in Sources */,
+				BFBFDAEE249B0A7400EEA965 /* LayoutConstraintHelper.swift in Sources */,
+				BFBFDAEA249B09C300EEA965 /* AudioPlayerComponent.swift in Sources */,
+				BFBFDAF1249B81E600EEA965 /* RoutersHelper.swift in Sources */,
 				BF5598C7248E8F83005DB9D6 /* AppDelegate.swift in Sources */,
 				BFBFDACE2496B5AA00EEA965 /* Constants.swift in Sources */,
 				BFBFDADD2498E8CC00EEA965 /* PlayingTrack.swift in Sources */,
@@ -390,6 +455,8 @@
 				BF5598DB248EA26A005DB9D6 /* AudioPlayerView.swift in Sources */,
 				BF5598E6248EF9DC005DB9D6 /* Recording.swift in Sources */,
 				BFBFDAE3249997CE00EEA965 /* DataBaseAcess.swift in Sources */,
+				BFBFDAEC249B0A0900EEA965 /* AudioPlayerComponentView.swift in Sources */,
+				BFBFDAE6249AE78000EEA965 /* RecordingPlayerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

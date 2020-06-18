@@ -13,9 +13,9 @@ import AVFoundation
 class AppDelegate: UIResponder, UIApplicationDelegate {
   var window: UIWindow?
   var appCoordinator: AppCoordinator?
-  
-  func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-    
+
+  func application(_ application: UIApplication,
+                   didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     window = UIWindow(frame: UIScreen.main.bounds)
 
     if let window = window {
@@ -30,16 +30,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       let session = AVAudioSession.sharedInstance()
       try session.setCategory(.playAndRecord, mode: .spokenAudio, options: .defaultToSpeaker)
       try session.setActive(true)
-      
+
       session.requestRecordPermission { (granted) in
         print("Session grant access \(granted)")
       }
-      
     } catch {
-      print("Error configuring AVAudioSession")
+      print("Error configuring AVAudioSession \(error)")
     }
 
     return true
   }
 }
-

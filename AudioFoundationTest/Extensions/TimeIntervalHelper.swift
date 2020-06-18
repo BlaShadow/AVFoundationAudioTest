@@ -15,7 +15,7 @@ extension TimeInterval {
 
     return "\(seconds).\(String(remainMilliSeconds).padding(toLength: 3, withPad: "000", startingAt: 0))"
   }
-  
+
   func parseTimeSeconds() -> String {
     let minutes = Int(self) / 60
     let seconds = Int(self) % 60

@@ -41,7 +41,7 @@ class RecordingCollectionViewCell: UICollectionViewCell {
 
     return label
   }()
-  
+
   var clockImageView: UIImageView = {
     let imageView = UIImageView()
     imageView.image = UIImage(named: "clock")
@@ -93,9 +93,9 @@ class RecordingCollectionViewCell: UICollectionViewCell {
       self.nameLabel.topAnchor.constraint(equalTo: self.container.topAnchor, constant: 10),
       self.nameLabel.leftAnchor.constraint(equalTo: self.container.leftAnchor, constant: 10)
     ])
-    
+
     self.container.addSubview(self.clockImageView)
-    
+
     NSLayoutConstraint.activate([
       self.clockImageView.widthAnchor.constraint(equalToConstant: 14),
       self.clockImageView.heightAnchor.constraint(equalToConstant: 14),
@@ -117,7 +117,7 @@ class RecordingCollectionViewCell: UICollectionViewCell {
     self.nameLabel.text = recording.name
 
     self.durationLabel.text = recording.duration.parseTimeSeconds()
-    
+
     let dateFormatterPrint = DateFormatter()
     dateFormatterPrint.dateFormat = "MMM dd, yyyy h:mm a"
     self.createdDateLabel.text = dateFormatterPrint.string(from: recording.created)

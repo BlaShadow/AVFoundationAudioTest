@@ -22,11 +22,11 @@ class AudioPlayerComponent: UIView {
 
     // Setup events
     self.setupEvents()
-    
+
     // Setup views
     self.setupView()
   }
-  
+
   private func setupEvents() {
     self.componentView.playButton.rx
       .tapGesture()
@@ -45,17 +45,17 @@ class AudioPlayerComponent: UIView {
         }
       }
       .disposed(by: self.disposeBag)
-    
+
     self.audioPlayer.playingStatus = self.playingStatusCallback
   }
-  
+
   func setupPlayer(url urlString: String) {
     if let url = URL(string: urlString) {
       self.audioPlayer.prepare(url: url)
       self.componentView.updateProgressPlaying(total: self.audioPlayer.playerDuration(), currentTime: 0)
     }
   }
-  
+
   private func playingStatusCallback(_ currentTime: TimeInterval, _ totalTime: TimeInterval) {
     self.componentView.updateProgressPlaying(total: totalTime, currentTime: currentTime)
   }

@@ -21,7 +21,7 @@ class AudioPlayer: NSObject {
 
   override init() {
     super.init()
-    
+
     self.playerStatus.subscribe(onNext: { (status) in
       switch status {
       case .iddle:
@@ -55,25 +55,25 @@ class AudioPlayer: NSObject {
     if (audioPlayer?.duration ?? 0.0) > 0.0 {
       audioPlayer?.prepareToPlay()
       audioPlayer?.play()
-      
+
       self.playerStatus.accept(.playing)
     }
   }
-  
+
   func pause() {
     self.audioPlayer?.pause()
     self.playerStatus.accept(.pause)
   }
-  
+
   func resume() {
     self.audioPlayer?.play()
     self.playerStatus.accept(.playing)
   }
-  
+
   func playerDuration() -> TimeInterval {
     return self.audioPlayer?.duration ?? 0.0
   }
-  
+
   func currentTimePlaying() -> TimeInterval {
     return self.audioPlayer?.currentTime ?? 0.0
   }
@@ -84,4 +84,3 @@ extension AudioPlayer: AVAudioPlayerDelegate {
     self.playerStatus.accept(.iddle)
   }
 }
-

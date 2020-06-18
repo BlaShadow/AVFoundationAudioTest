@@ -10,4 +10,5 @@ target 'AudioFoundationTest' do
   pod 'RxCocoa', '~> 5'
   pod 'RxGesture'
   pod 'RealmSwift'
+  pod 'SwiftLint'
 end

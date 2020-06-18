@@ -18,13 +18,13 @@ class RecordView: UIView {
     container.layer.shadowOffset = CGSize(width: 2, height: 2)
     container.layer.shadowRadius = 1.0
     container.layer.shadowOpacity = 0.3
-    
+
     let recordImage = UIImageView(image: UIImage(named: "record"))
     recordImage.translatesAutoresizingMaskIntoConstraints = false
     recordImage.highlightedImage = UIImage(named: "pause")
-    
+
     container.addSubview(recordImage)
-    
+
     NSLayoutConstraint.activate([
       recordImage.widthAnchor.constraint(equalToConstant: 40),
       recordImage.heightAnchor.constraint(equalToConstant: 40),
@@ -34,7 +34,7 @@ class RecordView: UIView {
 
     return container
   }()
-  
+
   let timerLabel: UILabel = {
     let label = UILabel()
     label.translatesAutoresizingMaskIntoConstraints = false
@@ -48,22 +48,22 @@ class RecordView: UIView {
   let gradientBackground = CAGradientLayer()
   let playerView = PlayerView(frame: .zero)
   var playerViewBottomConstraint: NSLayoutConstraint?
-  
+
   var playPauseButton: UIView {
     return self.playerView.playButton
   }
-  
+
   var saveButton: UIView {
     return self.playerView.saveButton
   }
-  
+
   var deleteButton: UIView {
     return self.playerView.deleteButton
   }
 
   override init(frame: CGRect) {
     super.init(frame: frame)
-    
+
     self.translatesAutoresizingMaskIntoConstraints = false
 
     self.setupViews()
@@ -81,16 +81,16 @@ class RecordView: UIView {
     gradientBackground.endPoint = CGPoint(x: 0.0, y: 1.0)
     gradientBackground.locations = [0.0, 1.0]
     gradientBackground.frame = self.bounds
-    
+
     self.layer.insertSublayer(gradientBackground, at: 0)
   }
-  
+
   override func layoutSubviews() {
       super.layoutSubviews()
 
       gradientBackground.frame = bounds
   }
-  
+
   private func setupViews() {
     self.addSubview(self.recordButton)
 
@@ -100,16 +100,16 @@ class RecordView: UIView {
       self.recordButton.centerXAnchor.constraint(equalTo: self.centerXAnchor),
       self.recordButton.centerYAnchor.constraint(equalTo: self.centerYAnchor)
     ])
-    
+
     self.addSubview(self.timerLabel)
-    
+
     NSLayoutConstraint.activate([
       self.timerLabel.widthAnchor.constraint(equalToConstant: 200),
       self.timerLabel.heightAnchor.constraint(greaterThanOrEqualToConstant: 0),
       self.timerLabel.centerXAnchor.constraint(equalTo: self.recordButton.centerXAnchor),
       self.timerLabel.topAnchor.constraint(equalTo: self.recordButton.bottomAnchor, constant: 20)
     ])
-    
+
     self.addSubview(self.playerView)
 
     self.playerViewBottomConstraint = self.playerView.bottomAnchor
@@ -126,19 +126,19 @@ class RecordView: UIView {
   required init?(coder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
-  
+
   public func isRecording(_ value: Bool) {
     if let imageView = self.recordButton.subviews.first as? UIImageView {
       imageView.isHighlighted = value
     }
   }
-  
+
   public func isPlaying(_ value: Bool) {
     if let imageView = self.playPauseButton as? UIImageView {
       imageView.isHighlighted = value
     }
   }
-  
+
   public func showPlayerView(totalTime: TimeInterval) {
     DispatchQueue.main.async {
       UIView.animate(withDuration: 0.3) {
@@ -148,7 +148,7 @@ class RecordView: UIView {
       }
     }
   }
-  
+
   public func resetTimer() {
     self.timerLabel.text = "00:00:00.000"
   }
@@ -161,7 +161,7 @@ class RecordView: UIView {
       }
     }
   }
-  
+
   public func updateProgressPlaying(total: TimeInterval, currentTime: TimeInterval) {
     self.playerView.updateProgressPlaying(total: total, currentTime: currentTime)
   }

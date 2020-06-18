@@ -18,9 +18,11 @@ class RecordingsDataSource: NSObject, UICollectionViewDataSource {
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     return self.items.count
   }
-  
+
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CELL", for: indexPath) as? RecordingCollectionViewCell else {
+    let rawCell = collectionView.dequeueReusableCell(withReuseIdentifier: "CELL", for: indexPath)
+
+    guard let cell = rawCell as? RecordingCollectionViewCell else {
       return UICollectionViewCell(frame: .zero)
     }
 

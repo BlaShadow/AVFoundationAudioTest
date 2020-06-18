@@ -10,16 +10,26 @@ import RealmSwift
 
 class DataBaseAcess {
   static func saveRecording(recording: Recording) {
-    let realm = try! Realm()
+    do {
+      let realm = try Realm()
 
-    try! realm.write {
-      realm.add(recording)
+      try realm.write {
+        realm.add(recording)
+      }
+    } catch {
+      print("Error saving recording \(error)")
     }
   }
-  
+
   static func savedRecordings() -> [Recording] {
-    let realm = try! Realm()
-    
-    return realm.objects(Recording.self).map { $0 }
+    do {
+      let realm = try Realm()
+
+      return realm.objects(Recording.self).map { $0 }
+    } catch {
+      print("Error fetching recordins \(error)")
+    }
+
+    return []
   }
 }

@@ -16,7 +16,7 @@ class RecordingPlayer: NSObject {
   var lastRecordingUrl: URL?
   var lastRecording: Recording?
   var statusTimer: Disposable?
-  
+
   var audioRecorder: AVAudioRecorder?
   var playerStatusReactive = BehaviorRelay<RecordingPlayerStatus>(value: .initial)
   var currentRecordingTime: ((_ time: Int) -> Void)?
@@ -29,7 +29,8 @@ class RecordingPlayer: NSObject {
     self.playerStatusReactive
     .subscribe(onNext: { (status) in
       if status == .startRecording || status == .startPlaying {
-        self.statusTimer = Observable<Int>.interval(DispatchTimeInterval.milliseconds(100), scheduler: MainScheduler.instance)
+        self.statusTimer = Observable<Int>.interval(DispatchTimeInterval.milliseconds(100),
+                                                    scheduler: MainScheduler.instance)
           .subscribe(onNext: { (thousandMilliSeconds) in
             if let handler = self.currentRecordingTime {
               handler(thousandMilliSeconds * 100)
@@ -42,7 +43,7 @@ class RecordingPlayer: NSObject {
     })
     .disposed(by: self.disposeBag)
   }
-  
+
   private func setupRecorder() {
     let recordSettings: [String: Any] = [
       AVFormatIDKey: Int(kAudioFormatLinearPCM),
@@ -55,7 +56,7 @@ class RecordingPlayer: NSObject {
       guard let recordingUrl = RoutersHelper.urlForRecordingAudio() else {
         return
       }
-      
+
       self.lastRecordingUrl = recordingUrl
 
       audioRecorder = try AVAudioRecorder(url: self.lastRecordingUrl!, settings: recordSettings)
@@ -65,27 +66,27 @@ class RecordingPlayer: NSObject {
     } catch {
     }
   }
-  
+
   func startRecording() {
     self.setupRecorder()
     self.playerStatusReactive.accept(.startRecording)
-    
+
     audioRecorder?.record()
   }
-  
+
   private func meter() -> Float {
     self.audioRecorder?.updateMeters()
 
     return ((self.audioRecorder?.averagePower(forChannel: 0) ?? 0) + Float(160.0)) / Float(160) * Float(1.5)
   }
-  
+
   func stopRecording() {
     self.playerStatusReactive.accept(.stopRecording)
     self.playerStatusReactive.accept(.iddle)
 
     self.audioRecorder?.stop()
   }
-  
+
   func clearLastRecording() {
     self.lastRecording = nil
     self.lastRecordingUrl = nil
@@ -97,16 +98,15 @@ class RecordingPlayer: NSObject {
 extension RecordingPlayer: AVAudioRecorderDelegate {
   func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
     if flag, let url = self.lastRecordingUrl {
-      
       do {
-        let player = try? AVAudioPlayer(contentsOf: recorder.url)
-        let duration = player?.duration ?? 0.0
+        let player = try AVAudioPlayer(contentsOf: recorder.url)
+        let duration = player.duration
         let name = "Recording"
-        
+
         self.lastRecording = Recording()
 
         let routeName = url.absoluteString.split(separator: "/").last ?? ""
-        
+
         self.lastRecording?.name = name
         self.lastRecording?.path = String(routeName)
         self.lastRecording?.duration = duration
